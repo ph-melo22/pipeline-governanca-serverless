@@ -1,6 +1,28 @@
+<div align="center">
+  <img src="assets/banner.png" alt="Serverless ITSM Pipeline Banner" width="100%">
+</div>
+
 # Pipeline de Governança de TI - Serverless 🚀
 
 Um pipeline autônomo, construído em Python, para processar dados de chamados de TI (ITSM), calcular métricas de qualidade e eficiência (SLA, tempo de resolução, volume por categoria) e enviar relatórios consolidados em Excel via e-mail. Tudo orquestrado de forma serverless na nuvem.
+
+## 📸 Galeria do Projeto
+
+*(Adicione suas screenshots na pasta `assets` com os nomes abaixo para que elas apareçam aqui!)*
+
+### Arquitetura rodando no Google Cloud (GCP)
+<img src="assets/gcp_screenshot.png" alt="Google Cloud Run Console" width="800">
+*Dashboard do Google Cloud Run mostrando o serviço online e os logs de execução.*
+
+### O Código Fonte (Python Modular)
+<img src="assets/code_screenshot.png" alt="Python Code Snippet" width="800">
+*Estrutura modular do pipeline, separando leitura, processamento e envio de e-mails.*
+
+### O Resultado Final (Planilha Gerada)
+<img src="assets/excel_screenshot.png" alt="Excel Report Generated" width="800">
+*Planilha rica em detalhes gerada dinamicamente pelo Pandas e OpenPyXL.*
+
+---
 
 ## 🛠️ Stack Tecnológica
 
