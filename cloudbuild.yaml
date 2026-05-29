@@ -1,0 +1,23 @@
+steps:
+  # Build da imagem de container
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/$PROJECT_ID/pipeline-governanca', '.']
+
+  # Push da imagem pro Container Registry do Google
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/$PROJECT_ID/pipeline-governanca']
+
+  # Deploy da imagem no Cloud Run (como um Job)
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: gcloud
+    args:
+      - 'run'
+      - 'jobs'
+      - 'deploy'
+      - 'pipeline-governanca-job'
+      - '--image'
+      - 'gcr.io/$PROJECT_ID/pipeline-governanca'
+      - '--region'
+      - 'us-central1'
+      - '--tasks'
+      - '1'

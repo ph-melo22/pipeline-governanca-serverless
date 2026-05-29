@@ -1,0 +1,16 @@
+# Ambientes Virtuais e Dependências
+venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Configurações e Credenciais
+.env
+
+# Testes
+.pytest_cache/
+
+# Arquivos Gerados (Ignorar dados para não poluir o repositório público)
+data/
+output/
